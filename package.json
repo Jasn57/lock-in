@@ -1,0 +1,33 @@
+{
+  "name": "lock-in",
+  "displayName": "Lock In",
+  "description": "A focus extension that locks VS Code to help you lock in on programming",
+  "version": "1.0.0",
+  "publisher": "Jasn57",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Productivity"
+  ],
+  "activationEvents": [
+    "onCommand:lockin.lock",
+    "onCommand:lockin.unlock"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "lockin.lock",
+        "title": "Lock In: Enable Lock Mode",
+        "category": "Lock In"
+      },
+      {
+        "command": "lockin.unlock",
+        "title": "Lock In: Disable Lock Mode",
+        "category": "Lock In"
+      }
+    ]
+  },
+  "icon": "media/icon.png"
+}
