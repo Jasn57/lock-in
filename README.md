@@ -47,6 +47,6 @@ Choose the Lock In package.
 
 Run the Lock In: Enable Lock Mode command to start.
 
-🪪 License
+## License
 
 MIT License — free to use, modify, and share.
