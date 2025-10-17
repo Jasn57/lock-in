@@ -1,18 +1,20 @@
 const vscode = require('vscode');
 
-function activate(context) {
-    console.log('Extension "Hello World" is now active!');
+let locked = false;
 
-    let disposable = vscode.commands.registerCommand('hello-world.sayHello', function () {
-        
+function activate(context) {
+    console.log('Lock In extension is now active.');
+
+    const lockCommand = vscode.commands.registerCommand('lockin.lock', () => {
+        locked = true;
+        vscode.window.showInformationMessage('app locked');
     });
 
-    context.subscriptions.push(disposable);
-}
+    const unlockCommand = vscode.commands.registerCommand('lockin.unlock', () => {
+        locked = false;
+        vscode.window.showInformationMessage('app unlocked');
+    });
 
 function deactivate() {}
 
-module.exports = {
-    activate,
-    deactivate
-};
+module.exports = { activate, deactivate };
